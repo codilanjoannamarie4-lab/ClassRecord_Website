@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About | Class Management Website</title>
+
+        <style>
+            body {
+                font-family: "Times New Roman", serif;
+                margin: 30px;
+                background: linear-gradient(135deg, #f4f4f4 0%, #e5e7e5 100%);
+                color: #2f3e2f;
+            }
+
+            nav a {
+                color: #212529;
+                text-decoration: none;
+                font-weight: bold;
+                padding: 6px 10px;
+                border-radius: 6px;
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+
+            nav a:hover {
+                background-color: #2e7d32;
+                color: #ffffff;
+            }
+
+            .top-header {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                margin-bottom: 50px;
+                background: #ffffff;
+                padding: 20px 25px;
+                border: 1px solid #cfd8cf;
+                border-radius: 12px;
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+                
+            }
+
+            .top-header nav {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                gap: 100px;
+                background: #f2f2f2;
+                padding: 5px 10px;
+                border-radius: 8px;
+                
+            }
+
+            .logo {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                border: 2px solid #2e7d32;
+                padding: 4px;
+                background: #f7f7f7;
+            }   
+
+            .columns {
+                display: flex;
+                gap: 24px;
+                margin-bottom: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: stretch;
+            }
+
+            .column {
+                color: #212529;
+                font-size: 18px;
+                background: #ffffff;
+                padding: 20px;
+                border: 1px solid #cfd8cf;
+                border-radius: 8px;
+                flex: 1 1 400px;
+                max-width: 700px;
+                text-align: center;
+                justify-content: center;
+            }
+
+            .column h2 {
+                margin-top: 0;
+                color: #212529;
+                font-size: 1.2em;
+            }
+
+            .column p {
+                color: #212529;
+                margin: 10px 0 0;
+                line-height: 1.6;
+            }
+
+            .media-wrapper {
+                background: #ffffff;
+                border: 1px solid #cfd8cf;
+                border-radius: 8px;
+                padding: 15px;
+                margin-bottom: 20px;
+            }
+
+            .audio-container{
+                color: #212529;
+                font-size: 18px;
+                background: #ffffff; 
+                padding: 15px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .audio-container audio {
+                width: 100%;
+                max-width: 400px;
+                height: 56px;
+            }
+
+            .video-container {
+                color: #212529;
+                font-size: 18px;
+                background: #ffffff; 
+                padding: 15px;
+                flex-wrap: wrap;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .video-container video {
+                width: 100%;
+                max-width: 720px;
+                aspect-ratio: 16 / 9;
+                height: auto;
+                border: 0;
+            }
+
+            p {
+                color: #212529;
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                font-size: 1.05em;
+            }
+
+            .hyperlinks-container {
+                text-align: center;
+            }
+
+            .hyperlinks-container a {
+                display: inline-block;
+                margin: 6px 0;
+                text-align: center;
+            }
+
+            .contribution-images {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+                margin-top: 16px;
+            }
+
+            .contribution-images p {
+                text-align: center;
+                justify-content: center;
+                margin: 0;
+            }
+
+            .contribution-images img {
+                width:  320px;
+                height: auto;
+                border-radius: 8px;
+                border: 1px solid #cfd8cf;
+                object-fit: cover;
+            }
+
+            *, *::before, *::after {
+                box-sizing: border-box;
+            }
+
+            @media (max-width: 600px) {
+                body {
+                    margin: 12px;
+                }
+
+                .top-header {
+                    flex-wrap: wrap;
+                    gap: 12px;
+                    margin-bottom: 20px;
+                    padding: 14px 10px;
+                }
+
+                .logo {
+                    width: 64px;
+                    height: 64px;
+                }
+
+                .top-header nav {
+                    order: 3;
+                    flex-basis: 100%;
+                    gap: 4px;
+                    flex-wrap: wrap;
+                    padding: 4px;
+                }
+
+                nav a {
+                    flex: 1 1 45%;
+                    padding: 4px;
+                    text-align: center;
+                }
+
+                nav h3 {
+                    margin: 6px 0;
+                    font-size: 1em;
+                }
+
+                .columns {
+                    gap: 16px;
+                }
+
+                .column {
+                    flex-basis: 100%;
+                    padding: 14px;
+                    font-size: 16px;
+                }
+
+                .column h1 {
+                    font-size: 1.5em;
+                }
+
+                .contribution-images img {
+                    width: 100%;
+                    max-width: 320px;
+                }
+            }
+            
+        </style>
+
+    </head>
+    <body>
+        <header class="top-header">
+            <img src="images/essu_logo.webp" alt="ESSU Logo" class="logo">
+
+            <nav>
+                <a href="index.html"><h3>Home</h3></a>
+                <a href="students.html"><h3>Students</h3></a>
+                <a href="grades.html"><h3>Grades</h3></a>
+                <a href="about.html"><h3>About</h3></a>
+            </nav>
+
+            <img src="images/CSS_LOGO.jpg" alt="CSS Logo" class="logo">
+
+        </header>
+        
+        <div class="columns">
+            <div class="column">
+                <h1><b>Documentation of Contributions</b></h1>
+                <p> The group joined in a google meet to discuss the plan on what to do with the activity. 
+                    Then, the group members were assigned a speciifc tasks regarding the website the group was assigned to make.
+                    These are the follwing:
+                </p><br>
+                
+                <p>Anire, Frank C. - He was assigned on deciding what video to put in the website.</p>
+                <p>Apar, Edwin F. - He help with the codes and the one who provided the code for the grades page.</p>
+                <p>Balanay, Juliane G. - She was assigned with providing the mp3 file or audio file to put in the website.</p>
+                <p>Codilan, Joanna Marie T. - She was the one who assembled all the codes, video, images and designed the website. </p>
+                <p>Colima, Elaiza D. - She was the one who created the introduction part in the homepage.</p>
+                <p>Santiana, Kurt Cyrus - He was one who assigned tasks within the group members and provided the codes for the homepage and students page.</p>
+                <p>Yape, Lester A. - He was the one who suggest of what will be the layout of the website.</p>
+
+            </div>
+            
+            <div class="column">
+                <div class="contribution-images">
+                    <p><b>The following are the documentation of during the google meet:</b></p>
+                    <br>
+                    <img src="images/748353855_3995568034081199_8021587705811592359_n.png" alt="image 1">
+                    <img src="images/749213759_2158088821431146_1035411791194610214_n.png" alt="image 2">
+                    <img src="images/751804271_1026163006807743_2498887158666704590_n.png" alt="image 3">
+                </div>
+               
+            </div>
+        </div>
+
+        <div class="media-wrapper">
+            <div class="video-container"> 
+                
+                <p><b>Here's a quick tour of Eastern Samar State University-Main Campus.</b></p>
+                
+                <video controls>
+                    <source src="Video_mp4/ESSU_Main_Campus_Tour(720p).mp4" type="video/mp4">
+                </video>
+                
+
+            </div>
+
+            <div class="audio-container"> 
+                
+                <p><b>Listen to Eastern Samar State University's Hymm.</b></p>
+
+                <audio controls>  
+                    <source src="Audio_mp3/ESSU Hymn with Lyrics.mp3" type="audio/mpeg">
+                </audio>
+
+            </div>
+
+            <div class="hyperlinks-container">
+
+                <p><b>Learn more about our University and Department, visit this official social media pages:</b></p>
+                <a href="https://www.facebook.com/share/1HCUxThm5a/" target="_blank">Eastern Samar State University</a><br>
+                <a href="https://www.facebook.com/share/1DF98w48po/" target="_blank">FCO-Integrated Computer Student Organization</a>
+
+            </div>
+        </div>
+
+       
+       
+    </body>
+
+</html>

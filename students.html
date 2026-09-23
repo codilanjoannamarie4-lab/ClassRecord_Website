@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Students | Class Management Website</title>
+
+        <style>
+            body {
+                font-family: "Times New Roman", serif;
+                margin: 30px;
+                background: linear-gradient(135deg, #f4f4f4 0%, #e5e7e5 100%);
+                color: #2f3e2f;
+            }
+
+            nav a {
+                color: #212529;
+                text-decoration: none;
+                font-weight: bold;
+                padding: 6px 10px;
+                border-radius: 6px;
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+
+            nav a:hover {
+                background-color: #2e7d32;
+                color: #ffffff;
+            }
+
+            .top-header {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                margin-bottom: 50px;
+                background: #ffffff;
+                padding: 20px 25px;
+                border: 1px solid #cfd8cf;
+                border-radius: 12px;
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+                
+            }
+
+            .top-header nav {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                gap: 100px;
+                background: #f2f2f2;
+                padding: 5px 10px;
+                border-radius: 8px;
+            }
+
+            .logo {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                border: 2px solid #2e7d32;
+                padding: 4px;
+                background: #f7f7f7;
+            }
+
+            main {
+                background: #ffffff;
+                padding: 25px;
+                border: 1px solid #cfd8cf;
+                border-radius: 12px;
+    
+            }
+
+
+            h1 {
+                color: #212529;
+                margin-bottom: 12px;
+                font-weight: bold;
+            }
+
+            p, strong {
+                color: #212529;
+            }
+        
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                background-color: #ffffff;
+                border: 2px solid #2e7d32;
+                margin-top: 5px;
+                overflow-x: auto; 
+                -webkit-overflow-scrolling: touch;
+            }
+
+            th, td {
+                border: 1px solid #cfd8cf;
+                padding: 5px;
+                text-align: center;
+            }
+
+            td {
+                color:#212529;
+                text-align: center;
+            }
+
+            th {
+                background-color: #2E7D32;
+                color: #ffffff;
+            }
+
+            button {
+                border: 1px solid #2e7d32;
+                background-color: #cad1ca;
+                color: black;
+                padding: 6px 12px;
+                border-radius: 6px;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #1b5e20;
+            }
+
+            *, *::before, *::after {
+                box-sizing: border-box;
+            }
+
+            @media (max-width: 600px) {
+                body {
+                    margin: 12px;
+                }
+
+                .top-header {
+                    flex-wrap: wrap;
+                    gap: 12px;
+                    margin-bottom: 20px;
+                    padding: 14px 10px;
+                }
+
+                .logo {
+                    width: 64px;
+                    height: 64px;
+                }
+
+                .top-header nav {
+                    order: 3;
+                    flex-basis: 100%;
+                    gap: 4px;
+                    flex-wrap: wrap;
+                    padding: 4px;
+                }
+
+                nav a {
+                    flex: 1 1 45%;
+                    padding: 4px;
+                    text-align: center;
+                }
+
+                nav h3 {
+                    margin: 6px 0;
+                    font-size: 1em;
+                }
+
+                main {
+                    padding: 16px 12px;
+                    overflow-x: auto;
+                }
+
+                main p {
+                    line-height: 1.5;
+                }
+
+                table {
+                    display: block;
+                    width: max-content;
+                    min-width: 100%;
+                    overflow-x: auto;
+                    white-space: nowrap;
+                }
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <header class="top-header">
+
+            <img src="images/essu_logo.webp" alt="ESSU Logo" class="logo">
+
+            <nav>
+                <a href="index.html"><h3>Home</h3></a>
+                <a href="students.html"><h3>Students</h3></a>
+                <a href="grades.html"><h3>Grades</h3></a>
+                <a href="about.html"><h3>About</h3></a>
+            </nav>
+
+            <img src="images/CSS_LOGO.jpg" alt="CSS Logo" class="logo">
+
+        </header>
+
+        <main>
+
+            <h1><b>Student Information</b></h1>
+
+            <p><b><u>Course:</u></b> Bachelor of Science in Information Technology</p>
+            <p><b><u>Section:</u></b> BSIT - 2A</p>
+            <p><b><u>Instructor:</u></b> Julius Baleña</p>
+            <p><b><u>School Year:</u></b> 2026 - 2027</p>
+
+            <table border="10" cellpadding="10">
+
+                <tr>
+                    <th><b>No.</b></th>
+                    <th><b>Student ID</b></th>
+                    <th><b>Last Name</b></th>
+                    <th><b>First Name</b></th>
+                    <th><b>Middle Name</b></th>
+                    <th><b>Sex</b></th>
+                    <th><b>Age</b></th>
+                </tr>
+
+                <tr>
+                    <th><b>1.</b></th>
+                    <td>25-000001</td>
+                    <td>Anire</td>
+                    <td>Frank</td>
+                    <td>Cambel</td>
+                    <td>Male</td>
+                    <td>19</td>
+                </tr>
+
+                <tr>
+                    <th><b>2.</b></th>
+                    <td>25-000002</td>
+                    <td>Apar</td>
+                    <td>Edwin</td>
+                    <td>Factor</td>
+                    <td>Male</td>
+                    <td>21</td>
+                </tr>
+
+                <tr>
+                    <th><b>3.</b></th>
+                    <td>25-000003</td>
+                    <td>Balanay</td>
+                    <td>Julianne Camille</td>
+                    <td>Garcia</td>
+                    <td>Female</td>
+                    <td>19</td>
+                </tr>
+
+                <tr>
+                    <th><b>4.</b></th> 
+                    <td>25-000004</td>
+                    <td>Codilan</td>
+                    <td>Joanna Marie</td>
+                    <td>Timbal</td>
+                    <td>Female</td>
+                    <td>19</td>
+                </tr>
+
+                <tr>
+                    <th><b>5.</b></th> 
+                    <td>25-000005</td>
+                    <td>Colima</td>
+                    <td>Elaiza Mae</td>
+                    <td>Alidon</td>
+                    <td>Female</td>
+                    <td>19</td>
+                </tr>
+
+                <tr>
+                    <th><b>6.</b></th>  
+                    <td>25-000006</td>
+                    <td>Santiana</td>
+                    <td>Kurt Cyrus</td>
+                    <td>Oliveros</td>
+                    <td>Male</td>
+                    <td>18</td>
+                </tr>
+
+                <tr>
+                    <th><b>7.</b></th> 
+                    <td>25-000007</td>
+                    <td>Yape</td>
+                    <td>Lester</td>
+                    <td>Dangco</td>
+                    <td>Male</td>
+                    <td>18</td>
+                </tr>
+
+            </table>
+        </main>
+            
+        <br>
+        
+        <main>
+            <h1><b>Attendance Record</b></h1><br>
+
+            <table class=""  border="10" cellpadding="10">
+
+                <tr>
+                    <th>No.</th>
+                    <th>Student ID</th>
+                    <th>Student Name</th>
+                    <th>Attendance</th>
+                </tr>
+
+                <tr>
+                    <th>1.</th>
+                    <td>25-000001</td>
+                    <td>Anire, Frank C.</td>
+                    <td>
+                        <button onclick="toggleAttendance(this)">
+                            🟢 Present
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>2.</th>
+                    <td>25-000002</td>
+                    <td>Apar, Edwin F.</td>
+                    <td>
+                        <button onclick="toggleAttendance(this)">
+                            🟢 Present
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>3.</th>
+                    <td>25-000003</td>
+                    <td>Balanay, Julianne Camille G.</td>
+                    <td>
+                        <button onclick="toggleAttendance(this)">
+                            🟢 Present
+                        </button>
+                    </td>
+                </tr>
+            
+
+                <tr>
+                    <th>4.</th>
+                    <td>25-000004</td>
+                    <td>Codillan, Joanna Marie T.</td>
+                    <td>
+                        <button onclick="toggleAttendance(this)">
+                            🟢 Present
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>5.</th>
+                    <td>25-000005</td>
+                    <td>Colima, Elaiza Mae C.</td>
+                    <td>
+                        <button onclick="toggleAttendance(this)">
+                            🟢 Present
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>6.</th>
+                    <td>25-000006</td>
+                    <td>Santiana, Kurt Cyrus O.</td>
+                    <td>
+                        <button onclick="toggleAttendance(this)">
+                            🟢 Present
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>7.</th>
+                    <td>25-000007</td>
+                    <td>Yape, Lester D.</td>
+                    <td>
+                        <button onclick="toggleAttendance(this)">
+                            🟢 Present
+                        </button>
+                    </td>
+                </tr>
+
+            </table>
+
+        </main>
+        
+       
+        <script>
+            function toggleAttendance(button){
+                const text = button.textContent.trim();
+                if (text.includes("Present")){
+                    button.innerHTML = "🔴 Absent";
+                } else {
+                    button.innerHTML = "🟢 Present";
+                }
+            }
+        
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Class Record Information Website</title>
+        <style>
+        
+            body {
+                font-family: "Times New Roman", serif;
+                margin: 30px;
+                background: linear-gradient(135deg, #f4f4f4 0%, #e5e7e5 100%);
+                color: #3d2f3e;
+            }
+
+            nav a {
+                color: #212529;
+                text-decoration: none;
+                font-weight: bold;
+                padding: 6px 10px;
+                border-radius: 6px;
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+
+
+            nav a:hover {
+                background-color: #2e7d32;
+                color: #ffffff;
+            }  
+
+            .top-header {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                margin-bottom: 50px;
+                background: #ffffff;
+                padding: 20px 25px;
+                border: 1px solid #cfd8cf;
+                border-radius: 12px;
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+                
+            }
+
+            .top-header nav {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                gap: 100px;
+                background: #f2f2f2;
+                padding: 5px 10px;
+                border-radius: 8px;
+        
+            }
+
+            .logo {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                border: 2px solid #2e7d32;
+                padding: 4px;
+                background: #F8F9FA;
+            }
+
+            h1 {
+                color: #212529;
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                margin-bottom: 10px;
+                font-weight: bold;
+           
+            }
+
+            p {
+                color: #212529;
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                font-size: 1.05em;
+           
+            }
+
+            .content {
+                text-align: center;
+               background: #ffffff;
+                padding: 25px;
+                border: 1px solid #cfd8cf;
+                border-radius: 12px;
+            }
+
+            .content-grid {
+                color: #212529;
+                display: grid;
+                grid-template-columns: repeat(2, minmax(280px, 1fr));
+                gap: 30px;
+                justify-content: center;
+                margin: 20px auto 0;
+                max-width: 1100px;
+            }
+
+            .content-box {
+                background: #f8f9fa;
+                padding: 16px;
+                border: 1px solid #cfd8cf;
+                border-radius: 8px;
+                text-align: center;
+            }
+
+            .content-box ul {
+                display: inline-block;
+                text-align: left;
+                margin: 0 auto;
+                padding-left: 20px;
+            }
+
+            *, *::before, *::after {
+                box-sizing: border-box;
+            }
+
+            @media (max-width: 600px) {
+                body {
+                    margin: 12px;
+                }
+
+                .top-header {
+                    flex-wrap: wrap;
+                    gap: 12px;
+                    margin-bottom: 20px;
+                    padding: 14px 10px;
+                }
+
+                .logo {
+                    width: 64px;
+                    height: 64px;
+                }
+
+                .top-header nav {
+                    order: 3;
+                    flex-basis: 100%;
+                    gap: 4px;
+                    flex-wrap: wrap;
+                    padding: 4px;
+                }
+
+                nav a {
+                    flex: 1 1 45%;
+                    padding: 4px;
+                    text-align: center;
+                }
+
+                nav h3 {
+                    margin: 6px 0;
+                    font-size: 1em;
+                }
+
+                .content {
+                    padding: 16px 12px;
+                }
+
+                h1 {
+                    font-size: 1.6em;
+                }
+
+                p {
+                    line-height: 1.5;
+                }
+
+                .content-grid {
+                    grid-template-columns: 1fr;
+                    gap: 16px;
+                }
+
+                .content-box {
+                    padding: 12px;
+                }
+            }
+
+        </style>
+    </head>
+
+    <body>
+        
+        <header class="top-header">
+            
+            <img src="images/essu_logo.webp" alt="ESSU Logo" class="logo">
+
+           <nav>
+                <a href="index.html"><h3>Home</h3></a>
+                <a href="students.html"><h3>Students</h3></a>
+                <a href="grades.html"><h3>Grades</h3></a>
+                <a href="about.html"><h3>About</h3></a>
+            </nav>
+        
+            <img src="images/CSS_LOGO.jpg" alt="CSS Logo" class="logo">
+
+        </header>
+
+        
+
+        <div class="content">
+
+            <h1><b>Class Record Information Website</b></h1>
+            <p>Welcome to our website.</p>
+
+            <div class="content-grid">
+
+                <div class="content-box">
+                    <h1><b>Introduction</b></h1>
+                    <p>Welcome to the Class Record Information Website for Eastern Samar State University. 
+                    This platform is designed to make classroom management simple, accurate, and accessible by bringing all essential academic records into one organized digital hub. 
+                    Through this website, users can seamlessly look up detailed student profiles, monitor daily attendance records, and track academic progress from preliminary and midterm evaluations all the way to final grades and remarks. 
+                    By streamlining data management for the BSIT 2A class, this portal helps keep students and instructors informed, organized, and up to date throughout the school year.</p>
+                </div>
+
+                <div class="content-box">
+                    <h1><b>Highlights</b></h1>
+                    <p>This website highlights the following:</p>
+
+                    <ul>
+                        <li>Homepage</li>
+                        <li>Students Information</li>
+                        <li>Students Grade Record</li>
+                        <li>and About</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        
+
+    </body>
+    
+</html>

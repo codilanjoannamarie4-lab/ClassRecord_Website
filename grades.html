@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grades | Class Management Website</title>
+
+        <style>
+             body {
+                font-family: "Times New Roman", serif;
+                margin: 30px;
+                background: linear-gradient(135deg, #f4f4f4 0%, #e5e7e5 100%);
+                color: #2f3e2f;
+            }
+
+            nav a {
+                color: #212529;
+                text-decoration: none;
+                font-weight: bold;
+                padding: 6px 10px;
+                border-radius: 6px;
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+
+            nav a:hover {
+                background-color: #2e7d32;
+                color: #ffffff;
+            }
+
+            .top-header {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                margin-bottom: 50px;
+                background: #ffffff;
+                padding: 20px 25px;
+                border: 1px solid #cfd8cf;
+                border-radius: 12px;
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+                
+            }
+
+            .top-header nav {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                gap: 100px;
+                background: #f2f2f2;
+                padding: 5px 10px;
+                border-radius: 8px;
+        
+            }
+
+            .logo {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                border: 2px solid #2e7d32;
+                padding: 4px;
+                background: #f7f7f7;
+            }
+
+            main {
+                background: #ffffff;
+                padding: 25px;
+                border: 1px solid #cfd8cf;
+                border-radius: 12px;
+               
+            }
+
+            h1 {
+                color: #212529;
+                margin-bottom: 12px;
+                font-weight: bold;
+            }
+
+            p, strong {
+                color: #212529;
+            }
+        
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                background-color: #ffffff;
+                border: 2px solid #2e7d32;
+                margin-top: 5px;
+                overflow-x: auto; 
+                -webkit-overflow-scrolling: touch;
+            }
+
+            th, td {
+                border: 1px solid #cfd8cf;
+                padding: 5px;
+                text-align: center;
+            }
+
+            td {
+                color:#212529;
+                text-align: center;
+            }
+
+            th {
+                background-color: #2E7D32;
+                color: #ffffff;
+            }
+
+            *, *::before, *::after {
+                box-sizing: border-box;
+            }
+
+            @media (max-width: 600px) {
+                body {
+                    margin: 12px;
+                }
+
+                .top-header {
+                    flex-wrap: wrap;
+                    gap: 12px;
+                    margin-bottom: 20px;
+                    padding: 14px 10px;
+                }
+
+                .logo {
+                    width: 64px;
+                    height: 64px;
+                }
+
+                .top-header nav {
+                    order: 3;
+                    flex-basis: 100%;
+                    gap: 4px;
+                    flex-wrap: wrap;
+                    padding: 4px;
+                }
+
+                nav a {
+                    flex: 1 1 45%;
+                    padding: 4px;
+                    text-align: center;
+                }
+
+                nav h3 {
+                    margin: 6px 0;
+                    font-size: 1em;
+                }
+
+                main {
+                    padding: 16px 12px;
+                    overflow-x: auto;
+                }
+
+                main p {
+                    line-height: 1.5;
+                }
+
+                table {
+                    display: block;
+                    width: max-content;
+                    min-width: 100%;
+                    overflow-x: auto;
+                    white-space: nowrap;
+                }
+            }
+
+        </style>
+
+    </head>
+    
+    <body>
+
+        <header class="top-header">
+            <img src="images/essu_logo.webp" alt="ESSU Logo" class="logo">
+
+            <nav>
+                <a href="index.html"><h3>Home</h3></a>
+                <a href="students.html"><h3>Students</h3></a>
+                <a href="grades.html"><h3>Grades</h3></a>
+                <a href="about.html"><h3>About</h3></a>
+            </nav>
+
+            <img src="images/CSS_LOGO.jpg" alt="CSS Logo" class="logo">
+
+        </header>
+
+        <main>
+
+            <h1><b>Grade Record</b></h1>
+
+            <p><b><u>Course:</u></b> Bachelor of Science in Information Technology</p>
+            <p><b><u>Section:</u></b> BSIT - 2A</p>
+            <p><b><u>Instructor:</u></b> Julius Baleña</p>
+            <p><b><u>School Year:</u></b> 2026 - 2027</p>
+
+            <table border="10" cellpadding="10">
+
+                <tr>
+                    <th>No.</th>
+                    <th>Student ID</th>
+                    <th>Student Name</th>
+                    <th>Prelim</th>
+                    <th>Midterm</th>
+                    <th>Final</th>
+                    <th>Average</th>
+                    <th>Equivalent</th>
+                    <th>Remarks</th>
+                </tr>
+
+                <tr>
+                    <th>1</th>
+                    <td>25-000001</td>
+                    <td>Anire, Frank C.</td>
+                    <td>95</td>
+                    <td>93</td>
+                    <td>96</td>
+                    <td>94.67</td>
+                    <td>1.1</td>
+                    <td style="color:green;"><b>PASSED</b></td>
+                </tr>
+
+                <tr>
+                    <th>2</th>
+                    <td>25-000002</td>
+                    <td>Apar, Edwin F.</td>
+                    <td>90</td>
+                    <td>91</td>
+                    <td>89</td>
+                    <td>90.00</td>
+                    <td>1.3</td>
+                    <td style="color:green;"><b>PASSED</b></td>
+                </tr>
+
+                <tr>
+                    <th>3</th>
+                    <td>25-000003</td>
+                    <td>Balanay, Julianne Camille G.</td>
+                    <td>87</td>
+                    <td>85</td>
+                    <td>88</td>
+                    <td>86.67</td>
+                    <td>1.5</td>
+                    <td style="color:green;"><b>PASSED</b></td>
+                </tr>
+
+                <tr>
+                    <th>4</th>
+                    <td>25-000004</td>
+                    <td>Codilan, Joanna Marie T.</td>
+                    <td>83</td>
+                    <td>84</td>
+                    <td>82</td>
+                    <td>83.00</td>
+                    <td>1.7</td>
+                    <td style="color:green;"><b>PASSED</b></td>
+                </tr>
+
+                <tr>
+                    <th>5</th>
+                    <td>25-000005</td>
+                    <td>Colima, Elaiza Mae A.</td>
+                    <td>80</td>
+                    <td>79</td>
+                    <td>81</td>
+                    <td>80.00</td>
+                    <td>2.0</td>
+                    <td style="color:green;"><b>PASSED</b></td>
+                </tr>
+
+                <tr>
+                    <th>6</th>
+                    <td>25-000006</td>
+                    <td>Santiana, Kurt Cyrus O.</td>
+                    <td>97</td>
+                    <td>98</td>
+                    <td>99</td>
+                    <td>98.00</td>
+                    <td>1.0</td>
+                    <td style="color:green;"><b>PASSED</b></td>
+                </tr>
+
+                <tr>
+                    <th>7</th>
+                    <td>25-000007</td>
+                    <td>Yape, Lester D.</td>
+                    <td>93</td>
+                    <td>84</td>
+                    <td>89</td>
+                    <td>88.67</td>
+                    <td>1.7</td>
+                    <td style="color:green;"><b>PASSED</b></td>
+                </tr>
+
+            </table>
+        </main>
+
+    
+    </body>
+
+</html>
